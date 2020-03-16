@@ -1,6 +1,6 @@
 <div class="container dev">
 
-  <form (ngSubmit)="search( forma )" #forma="ngForm">
+  <form (ngSubmit)="search( form.value )"  #form="ngForm" >
     <svg aria-hidden="true" class="octicon" height="64"
          role="img" viewBox="0 0 16 16" width="64"
          style="display:inline-block;fill:currentColor;user-select:none;vertical-align:text-bottom">
@@ -10,10 +10,15 @@
       </path>
     </svg>
     <label>Find any profile</label>
+    <a >
     <input class="form-control"
            type="text"
            name="name"
+           required
+           minlength="3"
+           maxlength="10"
            [(ngModel)]="user">
+    </a>
   </form>
 </div>
 

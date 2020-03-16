@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
 
@@ -9,17 +9,19 @@ import {Router} from "@angular/router";
 })
 export class SearchComponent implements OnInit {
 
-  user:string;
+  user: string;
 
-  constructor(private router:Router) { }
-
-  ngOnInit() {
-
+  constructor(private router: Router) {
   }
 
-  search(forma:NgForm){
-    console.log(forma);
-    console.log("works")
+  ngOnInit() {
+  }
+
+  search(form) {
+
+    let id: string = form
+    console.log(id);
+    this.router.navigate(['/detail/',id]);
 
   }
 
