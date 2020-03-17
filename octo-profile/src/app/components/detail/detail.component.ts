@@ -8,7 +8,12 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class DetailComponent implements OnInit {
 
-  constructor(private router:ActivatedRoute) { }
+  constructor(private router:ActivatedRoute) {
+    this.router.params
+      .subscribe(data =>{
+        console.log(data.user);
+      })
+  }
 
   ngOnInit() {
   }

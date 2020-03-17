@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
+import {stringify} from "querystring";
 
 @Component({
   selector: 'app-search',
@@ -19,10 +20,15 @@ export class SearchComponent implements OnInit {
 
   search(form) {
 
-    let id: string = form
-    console.log(id);
-    this.router.navigate(['/detail/',id]);
-
+    let id = form;
+    console.log(id.user);
+    this.router.navigate(['/details', id.user]).then(e =>{
+      if (e){
+        console.log("good work")
+      }else{
+        console.log("bad work")
+      }
+    });
   }
 
 }
