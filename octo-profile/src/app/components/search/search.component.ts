@@ -21,7 +21,6 @@ export class SearchComponent implements OnInit {
   search(form) {
 
     let id = form;
-    console.log(id.user);
     this.router.navigate(['/details', id.user]).then(e =>{
       if (e){
         console.log("good work")
