@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {GithubService} from "../../services/github.service";
+import {User} from "../../models/user";
 
 @Component({
   selector: 'app-detail',
@@ -8,14 +10,30 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class DetailComponent implements OnInit {
 
-  constructor(private router:ActivatedRoute) {
+  user: string;
+  allUser: User;
+
+  constructor(private router: ActivatedRoute, private service: GithubService) {
     this.router.params
-      .subscribe(data =>{
-        console.log(data.user);
+      .subscribe(data => {
+        this.user = data.user;
+        this.getDetails(this.user)
       })
   }
 
   ngOnInit() {
+
+  }
+
+
+  getDetails(user) {
+    this.service.getUser(user)
+      .subscribe(resp => {
+        this.allUser = resp;
+        console.log(this.allUser);
+
+      })
+
   }
 
 }

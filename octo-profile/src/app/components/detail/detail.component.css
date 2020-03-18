@@ -1,0 +1,150 @@
+.f1 {
+  background-color: rgb(26, 30, 34);
+  color: rgb(200, 225, 255);
+  padding: 3rem 5rem 10rem;
+}
+.f1 > div {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+.userProfileInfo {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.gqtKaZ .github-corner {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+}
+
+a {
+  color: rgb(0, 112, 243);
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+}
+
+.gqtKaZ .github-corner svg {
+  fill: rgb(0, 112, 243);
+  color: rgb(246, 248, 250);
+}
+
+
+.gqtKaZ .github-corner svg .octo-arm {
+  transform-origin: 130px 106px;
+}
+
+.userProfileInfo .avatar {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: rgb(0, 112, 243);
+  border-image: initial;
+  border-radius: 100%;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+.userProfileInfo .avatar img {
+  border-radius: 100%;
+}
+
+.userProfileInfo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: rgb(246, 248, 250);
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin-top: 0px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+.userProfileInfo h2 a {
+  color: rgb(0, 112, 243);
+}
+
+
+.userProfileInfo .info {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+
+.userProfileInfo .info__item {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0px 1rem 0.5rem;
+}
+
+
+.userProfileInfo .statusUser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 150px));
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.userProfileInfo .statusUser_item {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(36, 41, 46);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+
+.userProfileInfo .statusUser_item .num {
+  color: rgb(246, 248, 250);
+  font-size: 1.5rem;
+}
+
+
+.userProfileInfo .statusUser_item .num_label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-top: 0.75rem;
+  color: rgba(200, 225, 255, 0.7);
+}
