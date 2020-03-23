@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   baseUrl: ' https://api.github.com/users/',
   user: '{user}',
+  repo: '/repos?per_page=100'
 };
 
 /*
