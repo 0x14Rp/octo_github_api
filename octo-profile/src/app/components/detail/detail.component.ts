@@ -3,9 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {GithubService} from "../../services/github.service";
 import {User} from "../../models/user";
 import {Chart} from 'chart.js'
-import {buildChart} from "../../utils/buildChart";
-import {Background} from "../../utils/background";
-import {BackgroundsService} from "../../services/backgrounds.service";
+import 'chartjs-plugin-colorschemes';
 import {objectKeys} from "codelyzer/util/objectKeys";
 import {log} from "util";
 import {langColors} from "../../enums/langColors.enum";
@@ -27,10 +25,10 @@ export class DetailComponent implements OnInit {
   borderColorPie;
   backgroundPie;
   testing;
-  color:langColors;
+  color: langColors;
 
 
-  constructor(private router: ActivatedRoute, private service: GithubService, private background: BackgroundsService) {
+  constructor(private router: ActivatedRoute, private service: GithubService) {
     this.router.params
       .subscribe(data => {
         this.user = data.user;
@@ -77,9 +75,6 @@ export class DetailComponent implements OnInit {
         }), {});
         let data = (Object.values(counts));
         let testing = (Object.keys(counts));
-        this.borderColorPie = labels.map(label => langColors[label.slice(1).repeat(2)]);
-        this.backgroundPie = this.borderColorPie.map(color => `${color}B3`);
-
 
 
 
@@ -90,11 +85,9 @@ export class DetailComponent implements OnInit {
             datasets: [
               {
                 data: data,
-                borderColor: [
-                  this.borderColorPie
-                ],
+
                 fill: false,
-                backgroundColor: this.backgroundPie
+
 
 
               },
@@ -105,6 +98,14 @@ export class DetailComponent implements OnInit {
               display: true,
               position: 'right',
             },
+            plugins: {
+              colorschemes: {
+
+                scheme: 'brewer.Paired12',
+
+
+              }
+            }
           }
         })
 
