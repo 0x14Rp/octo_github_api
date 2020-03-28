@@ -77,7 +77,6 @@ export class DetailComponent implements OnInit {
         let testing = (Object.keys(counts));
 
 
-
         this.charUno = new Chart('langChart', {
           type: 'pie',
           data: {
@@ -87,7 +86,6 @@ export class DetailComponent implements OnInit {
                 data: data,
 
                 fill: false,
-
 
 
               },

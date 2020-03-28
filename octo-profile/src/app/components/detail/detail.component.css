@@ -248,3 +248,11 @@ h1, h2, h3, h4, h5, h6 {
 .info .info__item svg {
   margin-right: 10px;
 }
+
+.ccAxqV .dropdown-wrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 1rem;
+  color: rgb(106, 115, 125);
+}
