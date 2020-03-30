@@ -249,10 +249,68 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
 }
 
-.ccAxqV .dropdown-wrapper {
+.top_repo .repo-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+
+
+.top_repo .repo-list ul li .repo__name {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  font-size: 1rem;
+}
+
+.top_repo .repo-list ul li .repo p {
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+
+.top_repo .repo-list ul li .repo__name svg {
+  margin-right: 0.5rem;
+  min-width: 16px;
+}
+
+.top_repo .repo-list ul li .repo {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  color: rgb(88, 96, 105);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  transition: all 200ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+ul, ol {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.top_repo .repo-list ul li .repo h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgb(36, 41, 46);
+  margin-bottom: 0.75rem;
+  font-size: 20px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  overflow: hidden;
+}
+
+.top_repo .repo-list ul li .repo__stats {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  font-size: 13px;
   color: rgb(106, 115, 125);
+}
+
+.top_repo .repo-list ul li .repo__name h3 {
+  margin: 0px;
 }
