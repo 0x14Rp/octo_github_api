@@ -22,9 +22,6 @@ export class DetailComponent implements OnInit {
   charTres = [];
   borderColorDona;
   backgroundDona;
-  borderColorPie;
-  backgroundPie;
-  testing;
   color: langColors;
 
 
