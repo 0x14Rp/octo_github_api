@@ -57,7 +57,9 @@ export class DetailComponent implements OnInit {
 
   getRepos(user) {
 
-
+/*
+  all data here
+*/
   }
 
 
