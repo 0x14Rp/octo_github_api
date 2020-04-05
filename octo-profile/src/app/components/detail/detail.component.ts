@@ -7,6 +7,7 @@ import 'chartjs-plugin-colorschemes';
 import {objectKeys} from "codelyzer/util/objectKeys";
 import {log} from "util";
 import {langColors} from "../../enums/langColors.enum";
+import {Repo} from "../../models/repo";
 
 @Component({
   selector: 'app-detail',
@@ -23,6 +24,7 @@ export class DetailComponent implements OnInit {
   borderColorDona;
   backgroundDona;
   color: langColors;
+  repository: Repo[];
 
 
   constructor(private router: ActivatedRoute, private service: GithubService) {
@@ -35,7 +37,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.getDetails(this.user)
-    this.getRepos(this.user)
+    this.getTopRepos(this.user)
     this.getTopLanguages(this.user)
     this.getMostStared(this.user)
     this.starForLanguage(this.user)
@@ -55,13 +57,18 @@ export class DetailComponent implements OnInit {
   }
 
 
-  getRepos(user) {
+  getTopRepos(user) {
 
-/*
-  all data here
-*/
+    const LIMIT = 8;
+    const sortProperty = 'stargazers_count';
+    this.service.getRepository(user)
+      .subscribe(repos => {
+        this.repository = repos.filter(repo => !repo.fork )
+           .sort((a, b) => b[sortProperty] - a[sortProperty])
+          .slice(0,LIMIT)
+        console.log(this.repository);
+      })
   }
-
 
   getTopLanguages(user) {
     this.service.getRepository(user)
