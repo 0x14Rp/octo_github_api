@@ -146,12 +146,15 @@
       </div>
     </section>
     <section class="f2">
+      <div>
+      <header>
+        <h2>Top Repos</h2>
+      </header>
+      </div>
       <div class="top_repo">
-        <header>
-          <h2>Top Repos</h2>
-        </header>
+
         <div class="repo-list" *ngFor="let item of repository; let i = index;">
-          <ul style="position: relative;">
+          <ul>
             <li>
               <a href="{{item.html_url}}" target="_blank" rel="noopener noreferrer"
                  class="repo">
