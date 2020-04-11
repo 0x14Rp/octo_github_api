@@ -260,6 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 .top_repo .repo-list ul li .repo__name {
   display: flex;
   -webkit-box-align: center;
@@ -271,10 +272,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
-.top_repo .repo-list ul li .repo__name svg {
+/*.top_repo .repo-list ul li .repo__name svg {
   margin-right: 0.5rem;
   min-width: 16px;
-}
+}*/
 
 .top_repo .repo-list ul li .repo {
   display: flex;
@@ -296,7 +297,6 @@ ul, ol {
   margin: 0px;
   list-style: none;
 }
-/*
 .top_repo .repo-list ul li .repo h3 {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -307,7 +307,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: -0.5px;
   overflow: hidden;
-}*/
+}
 
 .top_repo .repo-list ul li .repo__stats {
   display: flex;
