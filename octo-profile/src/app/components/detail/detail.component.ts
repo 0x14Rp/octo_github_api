@@ -63,10 +63,10 @@ export class DetailComponent implements OnInit {
     const sortProperty = 'stargazers_count';
     this.service.getRepository(user)
       .subscribe(repos => {
-        this.repository = repos.filter(repo => !repo.fork )
-           .sort((a, b) => b[sortProperty] - a[sortProperty])
-          .slice(0,LIMIT)
-        console.log(this.repository);
+        this.repository = repos.filter(repo => !repo.fork)
+          .sort((a, b) => b[sortProperty] - a[sortProperty])
+          .slice(0, LIMIT)
+
       })
   }
 
