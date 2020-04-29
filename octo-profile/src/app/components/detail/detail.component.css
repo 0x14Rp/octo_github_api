@@ -272,10 +272,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
-/*.top_repo .repo-list ul li .repo__name svg {
+.top_repo .repo-list ul li .repo__name svg {
   margin-right: 0.5rem;
   min-width: 16px;
-}*/
+}
 
 .top_repo .repo-list ul li .repo {
   display: flex;
