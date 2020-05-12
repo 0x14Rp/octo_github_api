@@ -129,7 +129,7 @@ export class DetailComponent implements OnInit {
           .slice(0, limit);
         let labels = res.map(t => t.name)
         let dataTwo = res.map(e => e[sortProperty])
-          console.log(res);
+        console.log(res);
 
         this.charDos = new Chart('starChart', {
           type: 'bar',

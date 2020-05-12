@@ -71,3 +71,13 @@ l
 <octo-profile/src/app/components/detail/detail.component.html,9\f\9feff8e4320313737b99ad780cfea5ef45f330d4
 Z
 *octo-profile/src/app/app-routing.module.ts,3\4\34b01e4ac4768886167c58915d133fa2f5fd34e6
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+_
+/octo-profile/src/app/services/github.service.ts,a\c\ac3bc69298f8031ffc2b515abd39742701b7f325
+S
+#octo-profile/src/app/models/user.ts,8\1\81117969169ba1434ae0cb628b5d6b8167d09ad9
+]
+-octo-profile/src/app/enums/langColors.enum.ts,1\2\1246237f3ebbddca64fb7d8c38b29bc2dd296b33
+S
+#octo-profile/src/app/models/repo.ts,5\a\5aab7a3cee764a6ddb4d2bd6c965036b097b39c4
