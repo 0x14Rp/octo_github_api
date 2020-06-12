@@ -23,7 +23,6 @@ export class DetailComponent implements OnInit {
   charTres = [];
   borderColorDona;
   backgroundDona;
-  color: langColors;
   repository: Repo[];
 
 
