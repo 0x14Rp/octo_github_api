@@ -55,9 +55,8 @@ export class DetailComponent implements OnInit {
 
   }
 
-
+  //method to get repos
   getTopRepos(user) {
-
     const LIMIT = 8;
     const sortProperty = 'stargazers_count';
     this.service.getRepository(user)
@@ -68,7 +67,7 @@ export class DetailComponent implements OnInit {
 
       })
   }
-
+//method to get lenguages
   getTopLanguages(user) {
     this.service.getRepository(user)
       .subscribe(repos => {
