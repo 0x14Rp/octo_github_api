@@ -30,7 +30,7 @@ export class DetailComponent implements OnInit {
     this.router.params
       .subscribe(data => {
         this.user = data.user;
-
+        console.log(this.user);
       })
   }
 
